@@ -22,7 +22,7 @@ function adicionaLinha() { //tem a função de adicionar linha nova à variável
     const inputNomeAtividade = document.getElementById('nome-atividade'); // cria uma constantes para os ids
     const inputNotaAtividade = document.getElementById('nota-atividade');
 
-    if(atividades.includes(inputNomeAtividade.value)) {
+    if(atividades.includes(inputNomeAtividade.value)) { // diz se ja existe o elemento dentro da array
         alert(`A atividade: ${inputNomeAtividade.value} já foi inserida`)
     } else{
 
@@ -54,10 +54,10 @@ function atualizaMediaFinal() {
 }
 
 function calculaMediaFinal() {
-    let somaDasNotas = 0;
+    let somaDasNotas = 0; // inicia a variavel com o valor 0
 
-    for (let i = 0; i < notas.length; i++){
-        somaDasNotas += notas[i];
+    for (let i = 0; i < notas.length; i++){ // a interação ira continuar enquanto i for maior que 0 e a cada interação i aumenta 1
+        somaDasNotas += notas[i]; //soma todas as notas dentro da array
     }
 
     return somaDasNotas / notas.length; //calcula a media 
